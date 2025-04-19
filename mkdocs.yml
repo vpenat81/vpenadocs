@@ -1,4 +1,7 @@
 site_name: vpena docs
+site_url: https://vpenat81.github.io/my-docs/
 nav:
   - Home: index.md
   - aboutneme: aboutneme.md
+  theme:
+  name: mkdocs
