@@ -79,7 +79,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#prueba-tres" class="nav-link">prueba tres</a>
+            <li class="nav-item" data-bs-level="2"><a href="#documentation-how-to-deploy-my-docs-on-mkdocs" class="nav-link">Documentation how to deploy my docs on mkdocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#commands-after-editing" class="nav-link">Commands (after editing)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -88,7 +93,36 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="prueba-tres">prueba tres</h2></div>
+<h2 id="documentation-how-to-deploy-my-docs-on-mkdocs">Documentation how to deploy my docs on mkdocs</h2>
+<p><strong>Workflow Summary</strong>
+Edit your .md files in docs/</p>
+<ol>
+<li>
+<p>Update mkdocs.yml to reflect new pages</p>
+</li>
+<li>
+<p>Run mkdocs serve to preview</p>
+</li>
+<li>
+<p>Run git add ., git commit -m "...", git push</p>
+</li>
+<li>
+<p>Deploy with mkdocs gh-deploy</p>
+</li>
+</ol>
+<h2 id="commands-after-editing">Commands (after editing)</h2>
+<p>Command What it does
+mkdocs serve        Preview docs live at http://127.0.0.1:8000/
+mkdocs build        Builds the updated site into the site/ folder
+mkdocs gh-deploy    Publishes your changes to GitHub Pages</p>
+<h3 id="sintaxis-basica-de-markdown">Sintaxis básica de Markdown</h3>
+<p>Encabezados: Se crean usando el carácter # seguido de texto. Por ejemplo, # Titulo Principal genera un encabezado de nivel 1. 
+Texto en negrita: Se puede lograr envolviendo el texto con dos asteriscos ** o dos guiones bajos __. Por ejemplo, Esto es <strong>negrita</strong>. 
+Texto en cursiva: Se puede lograr envolviendo el texto con un asterisco * o un guión bajo _. Por ejemplo, Esto es <em>cursiva</em>. 
+Listas: Se crean usando los símbolos -, *, o + para listas no ordenadas, y usando números seguidos de un punto para listas ordenadas. 
+Enlaces: Se crean usando la sintaxis Texto del enlace. 
+Imágenes: Se crean usando la sintaxis !Texto alternativo. 
+Bloques de código: Se pueden crear utilizando tres backticks ```` al inicio y al final del bloque de código. </p></div>
             </div>
         </div>
 
