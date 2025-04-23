@@ -317,13 +317,13 @@ y cada columna (column) representa un campo de dato</p>
 <p>Ejemplo: Una tabla alumnos podría tener columnas como id, nombre, edad, correo, etc., y cada fila representa un alumno distinto.</p>
 <p><img alt="Texto alternativo" src="../1_tabla.png" /></p>
 <p><em>Ejemplo de tabla en SQL</em></p>
-<p><code>sql 
+<p>```sql 
 CREATE TABLE alumnos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   edad INT, correo VARCHAR(100) UNIQUE,
   fecha_registro DATE DEFAULT CURRENT_DATE 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;</code></p>
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;</p>
 
 
 
