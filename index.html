@@ -381,8 +381,16 @@ docs/
 <li>checar el repositorio en GitHub (público o privado).</li>
 <li>ejecutar en la carpeta de donde esta vpenadocs</li>
 <li>C:\Users\neme_\vpena-docs&gt; <strong>mkdocs gh-deploy</strong></li>
+<li>Para forzar el deploy: <strong>mkdocs gh-deploy --force</strong></li>
 <li>ir a mi ghpages: <strong>https://vpenat81.github.io/vpenadocs/</strong> <a href="https://vpenat81.github.io/vpenadocs/">link</a></li>
 </ul>
+<h2 id="opcional-pero-recomendable-si-no-carga-en-github">Opcional pero recomendable si no carga en github</h2>
+<p>1 Limpia tu sitio local
+- Windows powershell: <strong>rmdir /s /q site</strong>
+- Linux bash: <strong>rm -rf site</strong></p>
+<p>2 Reconstruye tu sitio
+- mkdocs build
+- mkdocs gh-deploy --force (le dice a MkDocs que reemplace lo que ya está en la rama gh-pages, incluso si no detecta cambios)</p>
 
 
 
