@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../compliance/">
+        <link rel="prev" href="../mkdocs/">
       
       
-        <link rel="next" href="../scrum/">
+        <link rel="next" href="../Database/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Database - vpena docs</title>
+        <title>Compliance - vpena docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#base-de-datos" class="md-skip">
+        <a href="#maintaining-controls" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Database
+              Compliance
             
           </span>
         </div>
@@ -235,28 +235,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../compliance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Compliance
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -266,15 +244,13 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Database
+    Compliance
     
   </span>
   
@@ -287,7 +263,7 @@
   
   
   <span class="md-ellipsis">
-    Database
+    Compliance
     
   </span>
   
@@ -300,8 +276,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -310,9 +284,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-tabla-en-sql" class="md-nav__link">
+  <a href="#maintaining-controls" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo de tabla en SQL
+      Maintaining Controls
     </span>
   </a>
   
@@ -322,6 +296,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -365,8 +361,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -375,9 +369,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-tabla-en-sql" class="md-nav__link">
+  <a href="#maintaining-controls" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo de tabla en SQL
+      Maintaining Controls
     </span>
   </a>
   
@@ -399,20 +393,73 @@
 
 
 
-<h1 id="base-de-datos"><strong><em>Base de datos</em></strong></h1>
-<p>Una tabla en MySQL es una estructura dentro de una base de datos que organiza los datos en filas y columnas, como si fuera una hoja de cálculo.</p>
-<p>Cada fila (row) representa un registro individual,
-y cada columna (column) representa un campo de dato</p>
-<p><strong>Ejemplo:</strong> Una tabla alumnos podría tener columnas como id, nombre, edad, correo, etc., y cada fila representa un alumno distinto.</p>
-<p><img alt="Texto alternativo" src="../T_1.png" /></p>
-<h2 id="ejemplo-de-tabla-en-sql"><em>Ejemplo de tabla en SQL</em></h2>
-<p>```sql title="Crear tabla alumnos"
-CREATE TABLE alumnos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    edad INT,
-    correo VARCHAR(100) UNIQUE
-);</p>
+  <h1>Compliance</h1>
+
+<h2 id="maintaining-controls">Maintaining Controls</h2>
+<p><strong>Audit and Reviews</strong> </p>
+<ul>
+<li>Organization</li>
+<li>Data Classification</li>
+<li>Asset Management</li>
+<li>Access Control </li>
+<li>Encryption</li>
+<li>Operations Security</li>
+<li>Network Security</li>
+<li>Physical &amp; Environmental security</li>
+<li>Supplier Management</li>
+<li>Security Incidents</li>
+</ul>
+<p><strong>Access Management</strong></p>
+<ul>
+<li>IAM Process</li>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>Accounting</li>
+<li>Tools</li>
+<li>Onboarding &amp; Offboarding</li>
+</ul>
+<p><strong>SOD</strong></p>
+<ul>
+<li>Definitions</li>
+<li>Identification and Analysis</li>
+<li>Maintenance and Resources</li>
+</ul>
+<p><strong>Architecture</strong></p>
+<ul>
+<li>Application Overview  &amp; Lifecycle</li>
+<li>Application Components</li>
+<li>Inbound and Outbound Feeders</li>
+<li>Control Points</li>
+</ul>
+<p><strong>Data privacy</strong></p>
+<ul>
+<li>Data classification</li>
+<li>Privacy by design</li>
+<li>GPA</li>
+<li>Assessments</li>
+<li>DSR process</li>
+<li>PWC testing</li>
+<li>Key control testing</li>
+</ul>
+<p><strong>Vulnerability Management</strong></p>
+<ul>
+<li>Scanning and Tools</li>
+<li>CVE, CVSS, CWE. OWASP</li>
+</ul>
+<p><strong>Change Management</strong></p>
+<ul>
+<li>Change</li>
+<li>Problem</li>
+<li>Incident</li>
+<li>Emergency Change Management</li>
+<li>RCA</li>
+</ul>
+<p><strong>Sunset</strong></p>
+<ul>
+<li>Offboarding app</li>
+<li>Remove data</li>
+<li>Remove Infra</li>
+</ul>
 
 
 
