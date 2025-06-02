@@ -681,6 +681,48 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h1 id="permisos-en-linux">🔐 Permisos en Linux</h1>
+<p>En Linux, los permisos determinan qué acciones puede realizar un usuario sobre un archivo o directorio.</p>
+<hr />
+<h2 id="tipos-de-permisos">📁 Tipos de Permisos</h2>
+<table>
+<thead>
+<tr>
+<th>Letra</th>
+<th>Nombre</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>read</td>
+<td>Leer el archivo o listar el directorio.</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>write</td>
+<td>Escribir/modificar el archivo o contenido del directorio.</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>execute</td>
+<td>Ejecutar un archivo o acceder a un directorio.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ver-permisos-con-ls-l">🔍 Ver permisos con <code>ls -l</code></h2>
+<p>```bash
+ls -l archivo.txt</p>
+<hr />
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nl">Ejemplo:</span><span class="w"> </span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="w"> </span><span class="mh">1</span><span class="w"> </span><span class="n">vpena</span><span class="w"> </span><span class="n">staff</span><span class="w">  </span><span class="mh">1024</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="mh">30</span><span class="w"> </span><span class="mh">12</span><span class="o">:</span><span class="mh">00</span><span class="w"> </span><span class="n">archivo</span><span class="p">.</span><span class="n">txt</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="n">regular</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directorio</span><span class="p">)</span>
+<span class="w">    </span><span class="n">rw</span><span class="o">-</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">permisos</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">usuario</span><span class="w"> </span><span class="p">(</span><span class="n">owner</span><span class="p">)</span>
+<span class="w">    </span><span class="n">r</span><span class="o">--</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">permisos</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">grupo</span>
+<span class="w">    </span><span class="n">r</span><span class="o">--</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">permisos</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">otros</span>
+</code></pre></div>
 
 
 
