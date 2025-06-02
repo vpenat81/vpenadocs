@@ -382,6 +382,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#consultar-informacion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Consultar Información de Usuarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-del-sistema-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Archivos del Sistema Relacionados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Gestión de Grupos
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -420,6 +447,33 @@
   <a href="#gestion-de-usuarios" class="md-nav__link">
     <span class="md-ellipsis">
       🧑‍💻 Gestión de Usuarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultar-informacion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Consultar Información de Usuarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-del-sistema-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Archivos del Sistema Relacionados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Gestión de Grupos
     </span>
   </a>
   
@@ -501,16 +555,136 @@ HOST + HOME</p>
 </tr>
 </tbody>
 </table>
-<p>-- Ver los detalles  un usuario /etc/passwd
-    grep user_name /etc/passwd</p>
-<p>Vpena:x:1001:1001:Viviana Pena /home/Vpena/bin/bash
-Vpena: nombre del usuario
-X: contraseña encriptada (etc/shadow)
-1001: UID
-1001: GID
-Viviana Pena: descripción
-/home/Vpena: carpeta personal
-/bin/bash: shell predeterminado</p>
+<div class="codehilite"><pre><span></span><code>    Vpena:x:1001:1001:Viviana Pena /home/Vpena/bin/bash
+    Vpena: nombre del usuario
+    X: contraseña encriptada (etc/shadow)
+    1001: UID
+    1001: GID
+    Viviana Pena: descripción
+    /home/Vpena: carpeta personal
+    /bin/bash: shell predeterminado
+</code></pre></div>
+
+<h2 id="consultar-informacion-de-usuarios">🔍 Consultar Información de Usuarios</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id nombre_usuario</code></td>
+<td>Muestra UID, GID y grupos del usuario.</td>
+</tr>
+<tr>
+<td><code>groups nombre_usuario</code></td>
+<td>Muestra los grupos del usuario.</td>
+</tr>
+<tr>
+<td><code>getent passwd nombre_usuario</code></td>
+<td>Muestra entrada completa del usuario desde <code>/etc/passwd</code>.</td>
+</tr>
+<tr>
+<td><code>grep nombre /etc/passwd</code></td>
+<td>Busca información del usuario en el archivo passwd.</td>
+</tr>
+<tr>
+<td><code>chage -l nombre_usuario</code></td>
+<td>Muestra información sobre caducidad de contraseña.</td>
+</tr>
+<tr>
+<td><code>who</code></td>
+<td>Muestra quién está conectado.</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>Muestra quién está conectado y qué está haciendo.</td>
+</tr>
+<tr>
+<td><code>last</code></td>
+<td>Muestra historial de inicios de sesión.</td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td>Lista los usuarios conectados.</td>
+</tr>
+<tr>
+<td><code>su nombre_usuario</code></td>
+<td>Cambia al usuario especificado.</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code>    Para ver todos los usuarios del sistema:
+    ```bash
+    cut -d: -f1 /etc/passwd
+</code></pre></div>
+
+<hr />
+<h2 id="archivos-del-sistema-relacionados">🧾 Archivos del Sistema Relacionados</h2>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/passwd</code></td>
+<td>Información básica de los usuarios.</td>
+</tr>
+<tr>
+<td><code>/etc/shadow</code></td>
+<td>Contraseñas cifradas y fechas de expiración.</td>
+</tr>
+<tr>
+<td><code>/etc/group</code></td>
+<td>Información de grupos del sistema.</td>
+</tr>
+<tr>
+<td><code>/etc/skel/</code></td>
+<td>Archivos predeterminados para nuevos usuarios.</td>
+</tr>
+<tr>
+<td><code>/etc/login.defs</code></td>
+<td>Configuración de políticas para usuarios nuevos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gestion-de-grupos">👥 Gestión de Grupos</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo groupadd nombre_grupo</code></td>
+<td>Crea un nuevo grupo.</td>
+</tr>
+<tr>
+<td><code>sudo groupdel nombre_grupo</code></td>
+<td>Elimina un grupo.</td>
+</tr>
+<tr>
+<td><code>sudo groupmod -n nuevo_nombre nombre_actual</code></td>
+<td>Cambia el nombre de un grupo.</td>
+</tr>
+<tr>
+<td><code>sudo gpasswd -a usuario grupo</code></td>
+<td>Añade un usuario al grupo.</td>
+</tr>
+<tr>
+<td><code>sudo gpasswd -d usuario grupo</code></td>
+<td>Elimina un usuario del grupo.</td>
+</tr>
+</tbody>
+</table>
 
 
 
