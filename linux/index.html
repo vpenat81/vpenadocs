@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../Database/">
+        <link rel="prev" href="../SYO-701/">
       
-      
-        <link rel="next" href="../SYO-701/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Scrum - vpena docs</title>
+        <title>Linux - vpena docs</title>
       
     
     
@@ -61,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#comandos-de-gestion-de-usuarios-en-linux" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scrum
+              Linux
             
           </span>
         </div>
@@ -274,17 +277,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../scrum/" class="md-nav__link">
         
   
   
@@ -295,7 +291,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -326,10 +321,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../linux/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -340,6 +357,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💻 Gestión de Usuarios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -361,6 +407,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💻 Gestión de Usuarios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -376,10 +441,76 @@
 
 
 
-  <h1>Scrum</h1>
-
-<p><strong>Prácticas Scrum</strong></p>
-<p><img alt="scrum" src="../S_1.png" /></p>
+<p>the virtual machine windows will be now switched to Scale mode. HOST + C to return Win
+Note: the host key is defined CTRL DERECHA
+Note that main menu bar is hidden in scaled mode, You can access it by pressing
+HOST + HOME</p>
+<h1 id="comandos-de-gestion-de-usuarios-en-linux">📋 Comandos de Gestión de Usuarios en Linux</h1>
+<h2 id="gestion-de-usuarios">🧑‍💻 Gestión de Usuarios</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo useradd nombre_usuario</code></td>
+<td>Crea un nuevo usuario.</td>
+</tr>
+<tr>
+<td><code>sudo useradd -m nombre_usuario</code></td>
+<td>Crea usuario y su directorio personal.</td>
+</tr>
+<tr>
+<td><code>sudo passwd nombre_usuario</code></td>
+<td>Asigna o cambia la contraseña del usuario.</td>
+</tr>
+<tr>
+<td><code>sudo userdel nombre_usuario</code></td>
+<td>Elimina un usuario (sin borrar su home).</td>
+</tr>
+<tr>
+<td><code>sudo userdel -r nombre_usuario</code></td>
+<td>Elimina usuario y su carpeta personal.</td>
+</tr>
+<tr>
+<td><code>sudo usermod -l nuevo_nombre antiguo_nombre</code></td>
+<td>Cambia el nombre de un usuario.</td>
+</tr>
+<tr>
+<td><code>sudo usermod -d /nueva/ruta nombre_usuario</code></td>
+<td>Cambia el directorio personal.</td>
+</tr>
+<tr>
+<td><code>sudo usermod -aG grupo nombre_usuario</code></td>
+<td>Añade usuario a un grupo sin quitar los anteriores.</td>
+</tr>
+<tr>
+<td><code>sudo usermod -L nombre_usuario</code></td>
+<td>Bloquea al usuario.</td>
+</tr>
+<tr>
+<td><code>sudo usermod -U nombre_usuario</code></td>
+<td>Desbloquea al usuario.</td>
+</tr>
+<tr>
+<td><code>sudo chage -l nombre_usuario</code></td>
+<td>info extendida el usuario, se necesita instalar</td>
+</tr>
+</tbody>
+</table>
+<p>-- Ver los detalles  un usuario /etc/passwd
+    grep user_name /etc/passwd</p>
+<p>Vpena:x:1001:1001:Viviana Pena /home/Vpena/bin/bash
+Vpena: nombre del usuario
+X: contraseña encriptada (etc/shadow)
+1001: UID
+1001: GID
+Viviana Pena: descripción
+/home/Vpena: carpeta personal
+/bin/bash: shell predeterminado</p>
 
 
 
