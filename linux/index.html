@@ -714,14 +714,132 @@
 </table>
 <hr />
 <h2 id="ver-permisos-con-ls-l">🔍 Ver permisos con <code>ls -l</code></h2>
-<p>```bash
-ls -l archivo.txt</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>archivo.txt
+
+---
+
+<span class="w">        </span>Ejemplo:<span class="w"> </span>-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>vpena<span class="w"> </span>staff<span class="w">  </span><span class="m">1024</span><span class="w"> </span>may<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">12</span>:00<span class="w"> </span>archivo.txt
+<span class="w">        </span>-<span class="w"> </span>→<span class="w"> </span>tipo<span class="w"> </span>de<span class="w"> </span>archivo<span class="w"> </span><span class="o">(</span>-<span class="w"> </span><span class="o">=</span><span class="w"> </span>archivo<span class="w"> </span>regular,<span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>directorio<span class="o">)</span>
+<span class="w">        </span>rw-<span class="w"> </span>→<span class="w"> </span>permisos<span class="w"> </span>del<span class="w"> </span>usuario<span class="w"> </span><span class="o">(</span>owner<span class="o">)</span>
+<span class="w">        </span>r--<span class="w"> </span>→<span class="w"> </span>permisos<span class="w"> </span>del<span class="w"> </span>grupo
+<span class="w">        </span>r--<span class="w"> </span>→<span class="w"> </span>permisos<span class="w"> </span>para<span class="w"> </span>otros
+
+
+
+<span class="p">|</span>-------<span class="p">|</span>-------<span class="p">|</span>-------------<span class="p">|</span>
+<span class="p">|</span><span class="w"> </span><span class="sb">`</span>u<span class="sb">`</span><span class="w">   </span><span class="p">|</span><span class="w"> </span>user<span class="w">  </span><span class="p">|</span><span class="w"> </span>El<span class="w"> </span>dueño<span class="w"> </span>del<span class="w"> </span>archivo.<span class="w"> </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span><span class="sb">`</span>g<span class="sb">`</span><span class="w">   </span><span class="p">|</span><span class="w"> </span>group<span class="w"> </span><span class="p">|</span><span class="w"> </span>El<span class="w"> </span>grupo<span class="w"> </span>asociado<span class="w"> </span>al<span class="w"> </span>archivo.<span class="w"> </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span><span class="sb">`</span>o<span class="sb">`</span><span class="w">   </span><span class="p">|</span><span class="w"> </span>others<span class="p">|</span><span class="w"> </span>Todos<span class="w"> </span>los<span class="w"> </span>demás<span class="w"> </span>usuarios.<span class="w"> </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span><span class="sb">`</span>a<span class="sb">`</span><span class="w">   </span><span class="p">|</span><span class="w"> </span>all<span class="w">   </span><span class="p">|</span><span class="w"> </span>Todos<span class="w"> </span><span class="o">(</span>u<span class="w"> </span>+<span class="w"> </span>g<span class="w"> </span>+<span class="w"> </span>o<span class="o">)</span>.<span class="w"> </span><span class="p">|</span>
+
+---
+
+<span class="c1">## 🔍 Ver permisos con `ls -l`</span>
+
+<span class="sb">```</span>bash
+ls<span class="w"> </span>-l<span class="w"> </span>archivo.txt
+</code></pre></div>
+<p>Ejemplo de salida:
+<div class="highlight"><pre><span></span><code>-rw-r--r-- 1 juan staff  1024 may 30 12:00 archivo.txt
+</code></pre></div></p>
+<p>Desglose:
+- <code>-</code> → tipo de archivo (<code>-</code> = archivo regular, <code>d</code> = directorio)
+- <code>rw-</code> → permisos del usuario (owner)
+- <code>r--</code> → permisos del grupo
+- <code>r--</code> → permisos para otros</p>
 <hr />
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nl">Ejemplo:</span><span class="w"> </span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span><span class="w"> </span><span class="mh">1</span><span class="w"> </span><span class="n">vpena</span><span class="w"> </span><span class="n">staff</span><span class="w">  </span><span class="mh">1024</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="mh">30</span><span class="w"> </span><span class="mh">12</span><span class="o">:</span><span class="mh">00</span><span class="w"> </span><span class="n">archivo</span><span class="p">.</span><span class="n">txt</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">archivo</span><span class="w"> </span><span class="n">regular</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directorio</span><span class="p">)</span>
-<span class="w">    </span><span class="n">rw</span><span class="o">-</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">permisos</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">usuario</span><span class="w"> </span><span class="p">(</span><span class="n">owner</span><span class="p">)</span>
-<span class="w">    </span><span class="n">r</span><span class="o">--</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">permisos</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">grupo</span>
-<span class="w">    </span><span class="n">r</span><span class="o">--</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="n">permisos</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">otros</span>
+<h2 id="cambiar-permisos-con-chmod">🔧 Cambiar permisos con <code>chmod</code></h2>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="o">[</span>opciones<span class="o">]</span><span class="w"> </span>archivo
+</code></pre></div>
+<h3 id="modos">Modos:</h3>
+<h4 id="simbolico">🔹 Simbólico</h4>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>u+x<span class="w"> </span>archivo.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>g-w<span class="w"> </span>archivo.txt
+</code></pre></div>
+<h4 id="numerico">🔹 Numérico</h4>
+<table>
+<thead>
+<tr>
+<th>Número</th>
+<th>Permiso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>---</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>--x</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>-w-</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>-wx</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>r--</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>r-x</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>rw-</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>rwx</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>archivo.sh
+</code></pre></div></p>
+<hr />
+<h2 id="cambiar-dueno-o-grupo">👑 Cambiar dueño o grupo</h2>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>usuario<span class="w"> </span>archivo
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>usuario:grupo<span class="w"> </span>archivo
+</code></pre></div>
+<hr />
+<h2 id="ver-permisos-especiales">🧪 Ver permisos especiales</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo especial</th>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>setuid / setgid</td>
+<td>Ejecutar como propietario o grupo.</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>sticky bit</td>
+<td>Solo el dueño puede borrar en un directorio compartido.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/tmp
+</code></pre></div>
+<hr />
+<h2 id="ejemplo-resumen">🧠 Ejemplo resumen</h2>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rx,o<span class="o">=</span>r<span class="w"> </span>archivo.txt
+</code></pre></div>
+<p>Equivale a:</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">754</span><span class="w"> </span>archivo.txt
 </code></pre></div>
 
 
