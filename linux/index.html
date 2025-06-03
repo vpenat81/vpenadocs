@@ -394,7 +394,34 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="💾 Basic boot process components">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-package-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Basic package compilation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Storage concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-hardware-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Listing hardware information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖥️ Listing hardware information">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -612,7 +639,34 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="💾 Basic boot process components">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-package-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Basic package compilation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Storage concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-hardware-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Listing hardware information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖥️ Listing hardware information">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -958,6 +1012,120 @@
 <td><strong>ISO Boot</strong></td>
 <td>Boots system from an ISO image</td>
 <td>Booting from <code>ubuntu.iso</code> using virtual machine or USB</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="basic-package-compilation">🛠️ Basic package compilation</h1>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>./configure</code></td>
+<td>Prepares the build environment by checking system dependencies and generating Makefiles</td>
+<td><code>./configure --prefix=/usr/local</code></td>
+</tr>
+<tr>
+<td><code>make</code></td>
+<td>Compiles the source code into executable binaries based on the Makefile</td>
+<td><code>make</code></td>
+</tr>
+<tr>
+<td><code>make install</code></td>
+<td>Installs the compiled binaries and other files to the system (requires root)</td>
+<td><code>sudo make install</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="storage-concepts">💻 Storage concepts</h1>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>File Storage</strong></td>
+<td>Stores data as a hierarchy of files and folders</td>
+<td>NFS, SMB/CIFS</td>
+</tr>
+<tr>
+<td><strong>Block Storage</strong></td>
+<td>Stores data in fixed-size blocks for performance and flexibility</td>
+<td>iSCSI, SAN</td>
+</tr>
+<tr>
+<td><strong>Object Storage</strong></td>
+<td>Stores data as objects with metadata and unique IDs</td>
+<td>Amazon S3, Op</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="listing-hardware-information">🖥️ Listing hardware information</h1>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>File Storage</strong></td>
+<td>Stores data as a hierarchy of files and folders</td>
+<td>NFS, SMB/CIFS</td>
+</tr>
+<tr>
+<td><strong>Block Storage</strong></td>
+<td>Stores data in fixed-size blocks for performance and flexibility</td>
+<td>iSCSI, SAN</td>
+</tr>
+<tr>
+<td><strong>Object Storage</strong></td>
+<td>Stores data as objects with metadata and unique IDs</td>
+<td>Amazon S3, OpenStack Swift</td>
+</tr>
+<tr>
+<td><strong>MBR (Master Boot Record)</strong></td>
+<td>Legacy partitioning scheme, supports up to 4 primary partitions</td>
+<td><code>/dev/sda1</code> using MBR</td>
+</tr>
+<tr>
+<td><strong>GPT (GUID Partition Table)</strong></td>
+<td>Modern partitioning scheme, supports large disks and more partitions</td>
+<td><code>/dev/sda1</code> using GPT</td>
+</tr>
+<tr>
+<td><strong>FUSE (Filesystem in Userspace)</strong></td>
+<td>Allows non-privileged users to create and mount their own filesystems</td>
+<td><code>sshfs</code>, <code>encfs</code></td>
+</tr>
+<tr>
+<td><strong>RAID - Striping (RAID 0)</strong></td>
+<td>Splits data across multiple disks for speed, no redundancy</td>
+<td>2 disks striped for performance</td>
+</tr>
+<tr>
+<td><strong>RAID - Mirroring (RAID 1)</strong></td>
+<td>Duplicates data across two or more disks for redundancy</td>
+<td>2 mirrored drives for high availability</td>
+</tr>
+<tr>
+<td><strong>RAID - Parity (RAID 5/6)</strong></td>
+<td>Uses parity information for fault tolerance with efficient storage</td>
+<td>3+ disks with 1 disk of space used for parity</td>
 </tr>
 </tbody>
 </table>
