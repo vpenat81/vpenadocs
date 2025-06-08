@@ -1078,8 +1078,9 @@ Main function to protect Confidentiality, Integrity and Availability </small></p
 </table>
 <hr />
 <h1 id="zero-trust-never-trust-always-verify">🔐 Zero Trust:  <strong><em>Never trust, always verify...</em></strong></h1>
-<p><small> This mean we can not just trust to the network perimeter to protect the system as a main line of defense, with deperimeterization (common in cloud and remote work and adoption of new technologies)we are put a lot or risk into the organization that is why we need to focus on: strong authentication, data encryption access controls per user/devices, zero trust architecture. </small></p>
-<p><small>Zero Trust demands verify for every device, user and transaction within the network, regardless of its origin (it doesn't mater where it comes from: inside or outside the network. </small></p>
+<p><small> <strong>It assumes that threats can come from inside or outside the network and that no user or device should be automatically trusted—even if it's inside the perimeter.</strong></small></p>
+<p><small> This mean we can not just trust to the network perimeter to protect the system as a main line of defense, with deperimeterization (“Don’t protect just the perimeter — protect everything, everywhere.”)we are put a lot or risk into the organization that is why we need to focus on: strong authentication, data encryption access controls per user/devices, zero trust architecture. </small></p>
+<p><small> <strong><em>Deperimeterization is removing the traditional network boundary as the main line of defense. Instead of relying only on firewalls or network borders, security is applied directly to data, users, and devices — no matter where they are.</em></strong> </small></p>
 <table>
 <thead>
 <tr>
@@ -1107,28 +1108,34 @@ Main function to protect Confidentiality, Integrity and Availability </small></p
 <tr>
 <th>Control Plane</th>
 <th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Control Plane</code></td>
 <td>responsible for defining, managing, and enforcing the policies related to user and system access.</td>
+<td></td>
 </tr>
 <tr>
 <td><code>Adaptive Identity</code></td>
 <td>validation into account user behavior, device, location and more.</td>
+<td>🔒 <strong><em>Example:</em></strong> If you usually log in from:A laptop in New York at 9 AM <strong>But suddenly:</strong> There’s a login attempt from Brazil at 3 AM on a phone ➡️ The system might block the login or ask for extra verification (like a code).</td>
 </tr>
 <tr>
 <td><code>Threat scope reduction</code></td>
 <td>Limit he access only for the need work tasks, avoid risk and compromise credentials.</td>
+<td>A customer support agent: ✅ Can access customer tickets ❌ Cannot access payment systems or internal code. <strong><em>So if their account is compromised, critical systems stay safe.</em></strong></td>
 </tr>
 <tr>
 <td><code>Policy-driven access control</code></td>
 <td>Enforce user access policies based on their roles and responsibilities.</td>
+<td><strong><em>Instead of manually assigning access,</em></strong> the system checks a policy like:“Allow access if the user is in the HR department and using a company device.”</td>
 </tr>
 <tr>
 <td><code>Secured zones</code></td>
-<td>Isolated environments within a network that are designed to house sensitive data.</td>
+<td>Isolated environments within a network that are designed to house sensitive data.They are like "digital vaults" — only trusted users and systems can enter, and even then, with strict controls.</td>
+<td>✅ Example:A company’s HR database lives in a Secured Zone. Only HR personnel with verified devices can access it, and only from inside the corporate VPN.using firewalls, access controls, and micro-segmentation</td>
 </tr>
 </tbody>
 </table>
@@ -1146,14 +1153,14 @@ Main function to protect Confidentiality, Integrity and Availability </small></p
 <tbody>
 <tr>
 <td><code>Policy Engine</code></td>
-<td>Makes decisions based on policies</td>
+<td><strong>Makes decisions</strong> based on policies: allow or block.</td>
 <td>Evaluates context like user identity, device health, location, and request type.</td>
 <td>Decides if a user with a healthy laptop and MFA can access a sensitive app.</td>
 <td>Should this request be allowed?</td>
 </tr>
 <tr>
 <td><code>Policy Administrator</code></td>
-<td>Enforces the decision from the Policy Engine.</td>
+<td><strong>Enforces</strong> the decision from the Policy Engine.</td>
 <td>Connects to the Policy Enforcement Point (PEP) to allow or block traffic.</td>
 <td>Sends an “allow” command to the firewall or gateway to permit access.</td>
 <td>Apply the Policy Engine’s decision</td>
@@ -1197,7 +1204,7 @@ Main function to protect Confidentiality, Integrity and Availability </small></p
 <td>An employee’s laptop trying to access a corporate app.</td>
 </tr>
 <tr>
-<td><strong>Policy Enforcement Point (PEP)</strong></td>
+<td><strong>Policy Enforcement Point (PEP)</strong> The "Gatekeeper</td>
 <td>Enforces access control decisions by allowing or blocking data flow.</td>
 <td>Acts as a gateway or proxy that checks with the Control Plane before permitting access.</td>
 <td>Firewall, secure proxy, or cloud access gateway controlling traffic to an app.</td>
@@ -1205,7 +1212,180 @@ Main function to protect Confidentiality, Integrity and Availability </small></p
 </tbody>
 </table>
 <hr />
+<p><small></p>
+<h1 id="zero-trust-example-with-control-plane-data-plane-policy-engine-and-policy-administrator">🛡️ Zero Trust Example with Control Plane, Data Plane, Policy Engine, and Policy Administrator</h1>
+<h2 id="scenario">🏢 Scenario:</h2>
+<p>An employer wants to access a confidential financial report stored on the company’s internal SharePoint server from her <strong>work laptop</strong> while working remotely.</p>
+<h2 id="components-in-action">🔁 Components in Action:</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role in the Process</th>
+<th>What Happens in the Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subject (User/Device)</strong></td>
+<td>The person or device requesting access.</td>
+<td>Emma using her work laptop.</td>
+</tr>
+<tr>
+<td><strong>System (Resource)</strong></td>
+<td>The data, app, or system being accessed.</td>
+<td>Financial report stored on SharePoint.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-plane-makes-the-decision">🧠 <strong>Control Plane</strong> – Makes the Decision</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Example Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Policy Engine</strong></td>
+<td>Evaluates the access request against security policies and contextual data (identity, device, etc).</td>
+<td>Checks if Emma’s device is trusted, she's using MFA, and the time/location.</td>
+</tr>
+<tr>
+<td><strong>Policy Administrator</strong></td>
+<td>Sends approved policies and decisions to the enforcement point.</td>
+<td>Delivers access instructions to the gateway (PEP).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-plane-enforces-the-decision">🔄 <strong>Data Plane</strong> – Enforces the Decision</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Example Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Policy Enforcement Point (PEP)</strong></td>
+<td>Enforces the decision: allows or blocks traffic between subject and resource.</td>
+<td>A secure proxy allows Emma’s device to connect to SharePoint.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="result">✅ Result:</h2>
+<ul>
+<li>The <strong>Policy Engine</strong> approves the request based on context (trusted device, correct identity, secure network).</li>
+<li>The <strong>Policy Administrator</strong> sends the instructions to the <strong>PEP</strong>.</li>
+<li>The <strong>PEP</strong> allows data flow, and <strong>Emma</strong> accesses the financial report securely.</li>
+</ul>
+<h3 id="summary-of-flow">💡 Summary of Flow:</h3>
+<blockquote>
+<p><strong>Emma → PEP → Policy Engine → Policy Admin → SharePoint (if allowed)</strong>
+</small></p>
+</blockquote>
+<h2 id="core-principles-of-zero-trust">🧱 Core Principles of Zero Trust</h2>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verify Explicitly</strong></td>
+<td>Authenticate and authorize based on identity, location, device health, etc.</td>
+</tr>
+<tr>
+<td><strong>Least Privilege Access</strong></td>
+<td>Limit access strictly to what is needed for a role.</td>
+</tr>
+<tr>
+<td><strong>Assume Breach</strong></td>
+<td>Design with the mindset that a breach has or could happen.</td>
+</tr>
+<tr>
+<td><strong>Micro-Segmentation</strong></td>
+<td>Split networks into smaller zones to isolate access.</td>
+</tr>
+<tr>
+<td><strong>Continuous Monitoring</strong></td>
+<td>Use real-time data to detect and respond to threats.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-components">🛠️ Key Components</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identity and Access Management (IAM)</strong></td>
+<td>Authenticate and manage user access.</td>
+</tr>
+<tr>
+<td><strong>Multi-Factor Authentication (MFA)</strong></td>
+<td>Add layers of verification beyond passwords.</td>
+</tr>
+<tr>
+<td><strong>Device Security</strong></td>
+<td>Verify device health before allowing access.</td>
+</tr>
+<tr>
+<td><strong>Network Segmentation</strong></td>
+<td>Isolate parts of the network to reduce attack spread.</td>
+</tr>
+<tr>
+<td><strong>Data Protection</strong></td>
+<td>Encrypt data and control who can access it.</td>
+</tr>
+<tr>
+<td><strong>Security Information and Event Management (SIEM)</strong></td>
+<td>Monitor and analyze security events.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><small></p>
+<h2 id="tools-technologies">🧰 Tools &amp; Technologies</h2>
+<ul>
+<li><strong>IAM Providers</strong>: Azure AD, Okta, Ping Identity</li>
+<li><strong>Endpoint Protection</strong>: CrowdStrike, Microsoft Defender, SentinelOne</li>
+<li><strong>VPN Alternatives</strong>: Zscaler, Perimeter 81</li>
+<li><strong>EDR</strong>: Endpoint Detection and Response tools</li>
+<li><strong>CASB</strong>: Cloud Access Security Brokers</li>
+</ul>
+<hr />
+<h2 id="benefits">✅ Benefits</h2>
+<ul>
+<li>Reduces <strong>attack surface</strong></li>
+<li>Protects against <strong>insider threats</strong></li>
+<li>Supports <strong>regulatory compliance</strong></li>
+<li>Improves <strong>visibility and access control</strong></li>
+</ul>
+<hr />
+<h2 id="implementation-tips">🚀 Implementation Tips</h2>
+<ol>
+<li><strong>Secure identities and devices first</strong> with MFA and device posture checks.</li>
+<li><strong>Map trust zones</strong> and sensitive assets.</li>
+<li><strong>Apply least privilege access</strong> across systems.</li>
+<li><strong>Leverage automation</strong> for threat detection and response.</li>
+<li><strong>Educate employees</strong> and enforce policies organization-wide.
+</small></li>
+</ol>
+<hr />
 <h1 id="gap-analysis">⚠️ <strong>Gap Analysis</strong></h1>
+<p><small> <strong>Gap Analysis = Finding the "Difference" between where you are and where you want to be.</strong> </small></p>
 <p><small> Is the process used to compare the current state of a process, system, or performance against a desired future state. It helps identify the "gaps" or differences that need to be addressed to achieve the goals.</small></p>
 <hr />
 <p><small> <strong>Example:</strong><br />
@@ -1234,6 +1414,182 @@ The gap analysis reveals missing tools and processes that must be implemented to
 <td>Limited employee training</td>
 <td>Regular security awareness training</td>
 <td>Insufficient user education</td>
+</tr>
+</tbody>
+</table>
+<h1 id="threat-actor-motivation-vs-intent">🕵️‍♂️ Threat Actor: Motivation vs. Intent</h1>
+<p>Understanding the difference between <strong>motivation</strong> and <strong>intent</strong> helps in identifying the purpose and target of a cyberattack.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Question it Answers</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Motivation</strong></td>
+<td>The <strong>real reason</strong> or <strong>personal drive</strong> behind the attacker’s actions.</td>
+<td><em>Why</em> is the attacker doing this?</td>
+<td>Anger, money, politics, curiosity, revenge, ideology.</td>
+</tr>
+<tr>
+<td><strong>Intent</strong></td>
+<td>The <strong>specific goal</strong> the attacker wants to achieve with the attack.</td>
+<td><em>What</em> does the attacker want to achieve?</td>
+<td>Stealing data, damaging systems, stopping services, spying.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="analogy">🔁 Analogy</h2>
+<blockquote>
+<p>🛢️ <strong>Motivation</strong> is the <strong>fuel</strong> in the car — it powers the attacker.<br />
+🎯 <strong>Intent</strong> is the <strong>destination</strong> — it’s what the attacker wants to reach.</p>
+</blockquote>
+<hr />
+<h2 id="real-world-example">🧨 Real-World Example</h2>
+<ul>
+<li>A hacktivist’s <strong>motivation</strong> is a strong <strong>political belief</strong> (anti-censorship).</li>
+<li>Their <strong>intent</strong> is to <strong>deface a government website</strong> to send a message.</li>
+</ul>
+<hr />
+<p>Understanding both helps in <strong>predicting, preventing, and responding</strong> to threats more effectively.</p>
+<h1 id="threat-actor-motivations">🎯 Threat Actor Motivations</h1>
+<h1 id="threat-actor-motivations_1">🎯 Threat Actor Motivations</h1>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Description</th>
+<th>Example</th>
+<th>Real Case Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Exfiltration</strong></td>
+<td>Stealing sensitive data from a system or organization.</td>
+<td>A hacker extracts customer data from a retail company's database.</td>
+<td><strong>Equifax breach (2017)</strong> – Sensitive data of 147 million people was stolen.</td>
+</tr>
+<tr>
+<td><strong>Blackmail</strong></td>
+<td>Using stolen or sensitive information to coerce or threaten someone.</td>
+<td>An attacker threatens to leak private employee emails unless paid.</td>
+<td><strong>Ashley Madison hack (2015)</strong> – Attackers threatened to leak user info.</td>
+</tr>
+<tr>
+<td><strong>Espionage</strong></td>
+<td>Spying to gain confidential information, often for competitive advantage.</td>
+<td>A state-sponsored group steals military research from another country.</td>
+<td><strong>APT10 (China)</strong> – Stole IP from Western companies and governments.</td>
+</tr>
+<tr>
+<td><strong>Service Disruption</strong></td>
+<td>Interrupting services to cause downtime or operational chaos.</td>
+<td>A DDoS attack takes down a hospital’s online appointment system.</td>
+<td><strong>Dyn DDoS attack (2016)</strong> – Disrupted Spotify, Twitter, Netflix, etc.</td>
+</tr>
+<tr>
+<td><strong>Financial Gain</strong></td>
+<td>Committing cybercrimes for profit through theft or extortion.</td>
+<td>Ransomware locks files and demands payment to unlock them.</td>
+<td><strong>WannaCry (2017)</strong> – Ransomware attack affecting 200,000+ systems.</td>
+</tr>
+<tr>
+<td><strong>Philosophical/Political Beliefs</strong></td>
+<td>Hacking to support a cause or protest government or corporate actions.</td>
+<td>Hacktivists deface a government website to protest censorship.</td>
+<td><strong>Anonymous vs. Scientology (2008)</strong> – DDoS and defacements in protest.</td>
+</tr>
+<tr>
+<td><strong>Ethical Reasons</strong></td>
+<td>White-hat hacking to expose flaws and improve security.</td>
+<td>A security researcher responsibly reports a vulnerability to a vendor.</td>
+<td><strong>Google Project Zero</strong> – Reports zero-day vulnerabilities responsibly.</td>
+</tr>
+<tr>
+<td><strong>Revenge</strong></td>
+<td>Attacking to harm a person or organization out of anger.</td>
+<td>A fired employee deletes files or leaks company data.</td>
+<td><strong>Tesla insider (2020)</strong> – Tried to sabotage the company after being dismissed.</td>
+</tr>
+<tr>
+<td><strong>Disruption/Chaos</strong></td>
+<td>Causing damage or confusion with no clear goal, just to create chaos.</td>
+<td>Random malware spreads and crashes thousands of computers globally.</td>
+<td><strong>NotPetya (2017)</strong> – Caused global damage with no clear target.</td>
+</tr>
+<tr>
+<td><strong>War (Cyber Warfare)</strong></td>
+<td>Nation-state attacks as part of military or geopolitical conflict.</td>
+<td>A government disables another country’s power grid through malware.</td>
+<td><strong>Stuxnet (2010)</strong> – Malware targeting Iran's nuclear program.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="threat-actor-motivations-one-word-memory-guide">🧠 Threat Actor Motivations – One-Word Memory Guide</h1>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>One-Word Keyword</th>
+<th>Meaning Hint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Exfiltration</strong></td>
+<td><strong>Stealing</strong></td>
+<td>Taking sensitive data</td>
+</tr>
+<tr>
+<td><strong>Blackmail</strong></td>
+<td><strong>Coercion</strong></td>
+<td>Forcing someone using threats</td>
+</tr>
+<tr>
+<td><strong>Espionage</strong></td>
+<td><strong>Spying</strong></td>
+<td>Secretly collecting confidential info</td>
+</tr>
+<tr>
+<td><strong>Service Disruption</strong></td>
+<td><strong>Downtime</strong></td>
+<td>Interrupting operations or services</td>
+</tr>
+<tr>
+<td><strong>Financial Gain</strong></td>
+<td><strong>Profit</strong></td>
+<td>Money-driven attacks</td>
+</tr>
+<tr>
+<td><strong>Philosophical/Political Beliefs</strong></td>
+<td><strong>Ideology</strong></td>
+<td>Motivated by cause or beliefs</td>
+</tr>
+<tr>
+<td><strong>Ethical Reasons</strong></td>
+<td><strong>Protection</strong></td>
+<td>To improve or expose flaws ethically</td>
+</tr>
+<tr>
+<td><strong>Revenge</strong></td>
+<td><strong>Retaliation</strong></td>
+<td>Personal payback or anger-driven</td>
+</tr>
+<tr>
+<td><strong>Disruption/Chaos</strong></td>
+<td><strong>Anarchy</strong></td>
+<td>Causing random damage or disorder</td>
+</tr>
+<tr>
+<td><strong>War (Cyber Warfare)</strong></td>
+<td><strong>Conflict</strong></td>
+<td>Nation-state or military-driven attacks</td>
 </tr>
 </tbody>
 </table>
