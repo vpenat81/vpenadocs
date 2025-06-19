@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../SYO-701/">
+      
+      
+        <link rel="next" href="../linux/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>IT Icons Reference - vpena docs</title>
+        <title>Scripting - vpena docs</title>
       
     
     
@@ -58,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#it-icons-reference" class="md-skip">
+        <a href="#bash-environment-variables-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IT Icons Reference
+              Scripting
             
           </span>
         </div>
@@ -319,10 +323,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../script/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Scripting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -333,6 +359,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-and-directory-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 User and Directory Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-process-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Script &amp; Process Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-and-search-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 System and Search Path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 Usage Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -408,143 +490,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hardware-devices" class="md-nav__link">
+  <a href="#user-and-directory-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Hardware &amp; Devices
+      📂 User and Directory Variables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
+  <a href="#script-process-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Networking
+      ⚙️ Script &amp; Process Variables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#software-tools" class="md-nav__link">
+  <a href="#system-and-search-path" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠 Software &amp; Tools
+      📦 System and Search Path
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
+  <a href="#usage-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      🔐 Security
+      📘 Usage Examples
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloud-devops" class="md-nav__link">
-    <span class="md-ellipsis">
-      ☁️ Cloud &amp; DevOps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Data &amp; Monitoring
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#developing-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Developing &amp; Build
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠️ Troubleshooting
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kubernetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ☸️ Kubernetes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#github" class="md-nav__link">
-    <span class="md-ellipsis">
-      🐙 GitHub
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vulnerability" class="md-nav__link">
-    <span class="md-ellipsis">
-      🐞 Vulnerability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🖊️ Documentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🖊️ Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#audit" class="md-nav__link">
-    <span class="md-ellipsis">
-      📋 Audit
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage 📀
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    <span class="md-ellipsis">
-      database
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -564,676 +541,120 @@
 
 
 
-<h1 id="it-icons-reference">IT Icons Reference</h1>
-<p>A categorized list of IT-related icons with descriptions.</p>
+<p>Scripting</p>
+<h1 id="bash-environment-variables-cheat-sheet">🧾 Bash Environment Variables Cheat Sheet</h1>
+<p>Use this guide to reference common environment variables in Bash (Linux, Ubuntu, WSL).</p>
 <hr />
-<h2 id="hardware-devices">💻 Hardware &amp; Devices</h2>
+<h2 id="user-and-directory-variables">📂 User and Directory Variables</h2>
 <table>
 <thead>
 <tr>
-<th>Icon</th>
+<th>Variable</th>
 <th>Description</th>
+<th>Example Output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>🖥️</td>
-<td>Desktop computer</td>
+<td><code>$HOME</code></td>
+<td>Home directory of the current user</td>
+<td><code>/home/viviana</code></td>
 </tr>
 <tr>
-<td>💻</td>
-<td>Laptop</td>
+<td><code>$USER</code></td>
+<td>Current username</td>
+<td><code>viviana</code></td>
 </tr>
 <tr>
-<td>🖨️</td>
-<td>Printer</td>
+<td><code>$PWD</code></td>
+<td>Present working directory</td>
+<td><code>/home/viviana/projects</code></td>
 </tr>
 <tr>
-<td>🖱️</td>
-<td>Mouse</td>
+<td><code>$SHELL</code></td>
+<td>Default shell for the current user</td>
+<td><code>/bin/bash</code></td>
 </tr>
 <tr>
-<td>⌨️</td>
-<td>Keyboard</td>
+<td><code>$UID</code></td>
+<td>Numeric user ID</td>
+<td><code>1000</code></td>
 </tr>
 <tr>
-<td>📱</td>
-<td>Smartphone</td>
-</tr>
-<tr>
-<td>📡</td>
-<td>Antenna/Wireless</td>
-</tr>
-<tr>
-<td>🔌</td>
-<td>Power/Plug</td>
+<td><code>$HOSTNAME</code></td>
+<td>Hostname of the system</td>
+<td><code>viviana-machine</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="networking">🌐 Networking</h2>
+<h2 id="script-process-variables">⚙️ Script &amp; Process Variables</h2>
 <table>
 <thead>
 <tr>
-<th>Icon</th>
+<th>Variable</th>
 <th>Description</th>
+<th>Example Output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>🌐</td>
-<td>Internet / Web</td>
+<td><code>$0</code></td>
+<td>Name of the current script</td>
+<td><code>./myscript.sh</code></td>
 </tr>
 <tr>
-<td>📡</td>
-<td>Wireless / Wi-Fi</td>
+<td><code>$1</code>, <code>$2</code></td>
+<td>Arguments passed to the script</td>
+<td>e.g., <code>$1</code> = <code>file.txt</code></td>
 </tr>
 <tr>
-<td>🔒</td>
-<td>VPN / Secure connection</td>
+<td><code>$?</code></td>
+<td>Exit status of the last command</td>
+<td><code>0</code> (success), <code>1</code> (error)</td>
 </tr>
 <tr>
-<td>🛜</td>
-<td>Network Cable / Ethernet</td>
-</tr>
-<tr>
-<td>🧭</td>
-<td>DNS / Routing</td>
-</tr>
-<tr>
-<td>🖧</td>
-<td>LAN / Network</td>
+<td><code>$$</code></td>
+<td>PID (process ID) of the current shell or script</td>
+<td><code>7289</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="software-tools">🛠 Software &amp; Tools</h2>
+<h2 id="system-and-search-path">📦 System and Search Path</h2>
 <table>
 <thead>
 <tr>
-<th>Icon</th>
+<th>Variable</th>
 <th>Description</th>
+<th>Example Output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>⚙️</td>
-<td>Settings / Configuration</td>
+<td><code>$PATH</code></td>
+<td>List of directories to search for executables</td>
+<td><code>/usr/bin:/bin:/usr/local/bin</code></td>
 </tr>
 <tr>
-<td>🧰</td>
-<td>Toolbox / Utilities</td>
+<td><code>$LANG</code></td>
+<td>Language/locale setting</td>
+<td><code>en_US.UTF-8</code></td>
 </tr>
 <tr>
-<td>🗃️</td>
-<td>Database / Storage</td>
-</tr>
-<tr>
-<td>📦</td>
-<td>Package management (RPM, APT)</td>
-</tr>
-<tr>
-<td>🧪</td>
-<td>Testing</td>
-</tr>
-<tr>
-<td>🐞</td>
-<td>Bug / Debugging</td>
+<td><code>$TERM</code></td>
+<td>Type of terminal in use</td>
+<td><code>xterm-256color</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="security">🔐 Security</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🔒</td>
-<td>Locked / Secure</td>
-</tr>
-<tr>
-<td>🔓</td>
-<td>Unlocked</td>
-</tr>
-<tr>
-<td>🛡️</td>
-<td>Security / Antivirus</td>
-</tr>
-<tr>
-<td>👤</td>
-<td>User Identity</td>
-</tr>
-<tr>
-<td>🧑‍💻</td>
-<td>Hacker / Pen Tester</td>
-</tr>
-<tr>
-<td>🚨</td>
-<td>Alert / Incident</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="cloud-devops">☁️ Cloud &amp; DevOps</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>☁️</td>
-<td>Cloud</td>
-</tr>
-<tr>
-<td>🏗️</td>
-<td>Infrastructure</td>
-</tr>
-<tr>
-<td>📁</td>
-<td>Deployment</td>
-</tr>
-<tr>
-<td>🔁</td>
-<td>CI/CD</td>
-</tr>
-<tr>
-<td>🐳</td>
-<td>Docker</td>
-</tr>
-<tr>
-<td>🕸️</td>
-<td>Kubernetes / Orchestration</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="data-monitoring">📊 Data &amp; Monitoring</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>📊</td>
-<td>Analytics / Metrics</td>
-</tr>
-<tr>
-<td>📈</td>
-<td>Monitoring / Growth</td>
-</tr>
-<tr>
-<td>⏱️</td>
-<td>Performance</td>
-</tr>
-<tr>
-<td>🧮</td>
-<td>Calculation / Load</td>
-</tr>
-<tr>
-<td>🧠</td>
-<td>AI / Machine Learning</td>
-</tr>
-<tr>
-<td>🔍</td>
-<td>Log / Search</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="developing-build">🧑‍💻 Developing &amp; Build</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🧑‍💻</td>
-<td>Developer / Coding</td>
-</tr>
-<tr>
-<td>🧱</td>
-<td>Build / Compile Process</td>
-</tr>
-<tr>
-<td>📝</td>
-<td>Code / Script File</td>
-</tr>
-<tr>
-<td>🧮</td>
-<td>Logic / Algorithms</td>
-</tr>
-<tr>
-<td>🪛</td>
-<td>Build Tools / Automation</td>
-</tr>
-<tr>
-<td>🧑‍🏭</td>
-<td>DevOps Engineer</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="troubleshooting">🛠️ Troubleshooting</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🛠️</td>
-<td>Tools / Fix</td>
-</tr>
-<tr>
-<td>⚠️</td>
-<td>Warning</td>
-</tr>
-<tr>
-<td>❗</td>
-<td>Error / Alert</td>
-</tr>
-<tr>
-<td>🔧</td>
-<td>Wrench / Settings</td>
-</tr>
-<tr>
-<td>🧰</td>
-<td>Toolbox</td>
-</tr>
-<tr>
-<td>🔍</td>
-<td>Magnifying Glass</td>
-</tr>
-<tr>
-<td>📋</td>
-<td>Clipboard</td>
-</tr>
-<tr>
-<td>💡</td>
-<td>Lightbulb / Hint</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="kubernetes">☸️ Kubernetes</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>☸️</td>
-<td>Kubernetes Logo</td>
-</tr>
-<tr>
-<td>📦</td>
-<td>Pod</td>
-</tr>
-<tr>
-<td>🧩</td>
-<td>Container</td>
-</tr>
-<tr>
-<td>🔄</td>
-<td>Deployment / Rolling Update</td>
-</tr>
-<tr>
-<td>⚙️</td>
-<td>Service / Configuration</td>
-</tr>
-<tr>
-<td>📈</td>
-<td>Autoscaler / Scaling</td>
-</tr>
-<tr>
-<td>🔒</td>
-<td>Security / RBAC</td>
-</tr>
-<tr>
-<td>🗂️</td>
-<td>Namespace</td>
-</tr>
-<tr>
-<td>🖥️</td>
-<td>Node</td>
-</tr>
-<tr>
-<td>🛠️</td>
-<td>kubectl / CLI Tools</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="github">🐙 GitHub</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🐙</td>
-<td>GitHub Octocat</td>
-</tr>
-<tr>
-<td>🔀</td>
-<td>Pull Request</td>
-</tr>
-<tr>
-<td>🛠️</td>
-<td>Actions / CI/CD</td>
-</tr>
-<tr>
-<td>📁</td>
-<td>Repository</td>
-</tr>
-<tr>
-<td>📄</td>
-<td>File</td>
-</tr>
-<tr>
-<td>📝</td>
-<td>Issue / Ticket</td>
-</tr>
-<tr>
-<td>⭐</td>
-<td>Star / Favorite</td>
-</tr>
-<tr>
-<td>🍴</td>
-<td>Fork</td>
-</tr>
-<tr>
-<td>👥</td>
-<td>Collaborators</td>
-</tr>
-<tr>
-<td>⏳</td>
-<td>Waiting / Pending</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="vulnerability">🐞 Vulnerability</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>⚠️</td>
-<td>Vulnerability Warning</td>
-</tr>
-<tr>
-<td>🐞</td>
-<td>Bug / Defect</td>
-</tr>
-<tr>
-<td>🔓</td>
-<td>Security Flaw / Open Access</td>
-</tr>
-<tr>
-<td>🛡️</td>
-<td>Protection / Defense</td>
-</tr>
-<tr>
-<td>🔥</td>
-<td>Critical Risk / High Severity</td>
-</tr>
-<tr>
-<td>🕵️‍♂️</td>
-<td>Threat / Intrusion</td>
-</tr>
-<tr>
-<td>🧨</td>
-<td>Exploit / Attack</td>
-</tr>
-<tr>
-<td>🔍</td>
-<td>Vulnerability Scan / Analysis</td>
-</tr>
-<tr>
-<td>🚫</td>
-<td>Blocked / Mitigated</td>
-</tr>
-<tr>
-<td>📝</td>
-<td>Vulnerability Report</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="documentation">🖊️ Documentation</h2>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>📄</td>
-<td>Document</td>
-</tr>
-<tr>
-<td>📚</td>
-<td>Manual / Guide</td>
-</tr>
-<tr>
-<td>📝</td>
-<td>Notes / Writing</td>
-</tr>
-<tr>
-<td>📋</td>
-<td>Clipboard / Checklist</td>
-</tr>
-<tr>
-<td>📖</td>
-<td>Open Book / Reference</td>
-</tr>
-<tr>
-<td>🗂️</td>
-<td>Folder / Archive</td>
-</tr>
-<tr>
-<td>🖊️</td>
-<td>Edit / Annotation</td>
-</tr>
-<tr>
-<td>🔖</td>
-<td>Bookmark</td>
-</tr>
-<tr>
-<td>📑</td>
-<td>Section / Pages</td>
-</tr>
-<tr>
-<td>🧾</td>
-<td>Receipt / Record</td>
-</tr>
-</tbody>
-</table>
-<h3 id="audit">📋 Audit</h3>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>📋</td>
-<td>Audit Checklist</td>
-</tr>
-<tr>
-<td>✅</td>
-<td>Audit Passed / Verified</td>
-</tr>
-<tr>
-<td>❌</td>
-<td>Audit Failed / Issue Found</td>
-</tr>
-<tr>
-<td>🕵️‍♂️</td>
-<td>Auditor / Inspection</td>
-</tr>
-<tr>
-<td>🔍</td>
-<td>Audit Review / Analysis</td>
-</tr>
-<tr>
-<td>🗂️</td>
-<td>Audit Records / Files</td>
-</tr>
-<tr>
-<td>📝</td>
-<td>Audit Report</td>
-</tr>
-<tr>
-<td>⏳</td>
-<td>Audit Pending / In Progress</td>
-</tr>
-<tr>
-<td>📊</td>
-<td>Audit Metrics / Data</td>
-</tr>
-<tr>
-<td>🔒</td>
-<td>Compliance / Security</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="storage">Storage 📀</h3>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>💾</td>
-<td>Save / Disk</td>
-</tr>
-<tr>
-<td>🗄️</td>
-<td>Filing Cabinet</td>
-</tr>
-<tr>
-<td>🗃️</td>
-<td>Card File Box</td>
-</tr>
-<tr>
-<td>🗂️</td>
-<td>File Folder</td>
-</tr>
-<tr>
-<td>📦</td>
-<td>Package / Storage</td>
-</tr>
-<tr>
-<td>🧰</td>
-<td>Toolbox / Storage</td>
-</tr>
-<tr>
-<td>🧮</td>
-<td>Abacus / Data Storage</td>
-</tr>
-<tr>
-<td>🖴</td>
-<td>Floppy Disk</td>
-</tr>
-<tr>
-<td>📀</td>
-<td>Optical Disk / CD</td>
-</tr>
-<tr>
-<td>🛢️</td>
-<td>Oil Drum / Bulk Storage</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="database">database</h3>
-<table>
-<thead>
-<tr>
-<th>Icon</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🗄️</td>
-<td>Database / Storage</td>
-</tr>
-<tr>
-<td>🛢️</td>
-<td>Database / Barrel</td>
-</tr>
-<tr>
-<td>🗃️</td>
-<td>Database / Archive</td>
-</tr>
-<tr>
-<td>🗂️</td>
-<td>Data Folder</td>
-</tr>
-<tr>
-<td>💽</td>
-<td>Mini Disk / Database Storage</td>
-</tr>
-<tr>
-<td>🖥️</td>
-<td>Server / Database Server</td>
-</tr>
-<tr>
-<td>🧮</td>
-<td>Data Processing / Analytics</td>
-</tr>
-<tr>
-<td>🧰</td>
-<td>Database Tools / Management</td>
-</tr>
-<tr>
-<td>📊</td>
-<td>Database Analytics / Reports</td>
-</tr>
-<tr>
-<td>🔢</td>
-<td>Data / Numeric Data</td>
-</tr>
-</tbody>
-</table>
-<p>create table with markdown with example, separate table per bullet in below text and add a column with examples</p>
+<h2 id="usage-examples">📘 Usage Examples</h2>
+<p>```bash
+echo "Username: $USER"
+echo "Home directory: $HOME"
+echo "Script name: $0"
+echo "First argument: $1"</p>
 
 
 
